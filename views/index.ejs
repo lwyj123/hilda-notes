@@ -1,0 +1,26 @@
+<%- include('common-header'); %>
+<div class="layout">
+  <div class="info-container">
+    <h1 class="title">quill-sharedb-cursors</h1>
+    <p>An attempt at cursor sync in a collaborative editing scenario using <a href="https://quilljs.com">Quill</a> and <a href="https://github.com/share/sharedb">ShareDB</a>.</p>
+    <p>Built by <a href="https://github.com/pedrosanta">pedrosanta</a> at <a href="https://reedsy.com">Reedsy</a>.</p>
+    <p>Docs and discussion <a href="https://github.com/pedrosanta/quill-sharedb-cursors">at <i class="fa fa-lg fa-github-square"></i> GitHub</a>.</p>
+    <h3>Sockets</h3>
+    <p><strong>ShareDB:</strong> <span id="sharedb-socket-indicator" class="socket-indicator" style="background-color: red;"></span><span id="sharedb-socket-state" class="socket-state">disconnected</span></p>
+    <p><strong>Cursors:</strong> <span id="cursors-socket-indicator" class="socket-indicator" style="background-color: red;"></span><span id="cursors-socket-state" class="socket-state">error</span></p>
+    <div id="connect-panel">
+      <h3>Username</h3>
+      <form id="username-form">Set your username and connect to edit:<br><input id="username-input" type="text"><br><button id="connect-btn">Connect</button></form>
+    </div>
+    <div id="users-panel" style="display: block;">
+      <h3>Users editing</h3>
+      <ul id="users-list">
+      </ul>
+    </div>
+  </div>
+  <div class="editor-container">
+    <div id="editor"></div>
+  </div>
+</div>
+<%- include('common-basejs'); %>
+<%- include('common-footer'); %>
