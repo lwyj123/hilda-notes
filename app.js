@@ -1,6 +1,5 @@
 const koa = require('koa');
 var path = require('path');
-var favicon = require('serve-favicon');
 const logger = require('koa-logger');
 const views = require('koa-views')
 const static = require('koa-static');
